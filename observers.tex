@@ -192,30 +192,32 @@ slow-roll expansion.
 
 \subsection{Small-field regime}
 In small-field models of inflation, where $\phi$ changes by much less than a Planck mass,
-we must make three assumptions to obtain a viable model of inflation.  
-First, the field must be initially slow, such that the potential energy dominates the Einstein equations to yield $w < -1/3$.
-The Hubble friction in Eq.~(\ref{eq:scalareom}) rapidly saturates the force $V'(\phi)$, and we can neglect the $\ddot\phi$ term and solve for 
+we must make four assumptions to obtain a slow-roll (attractor) model of inflation.  
+First, the field must be initially slow, such that the potential energy dominates the Einstein equations to yield $w < -1/3$, i.e. $H^2 \sim V/(3\MMp)$.
+Second, $V''(\phi)$ must be small in order for the Hubble friction in Eq.~(\ref{eq:scalareom}) to lead to an attractor, where 
+the friction has time to cancel the force $V'(\phi)$, allowing us to neglect the $\ddot\phi$ term and solve for 
 \begin{align}
 \dot\phi \approx -\frac{V'(\phi)}{3 H}.
 \end{align}
-Thus the second assumption is that the potential is sufficiently flat to maintain $\dot\phi^2 < V$.
-Finally, this must be true for at least 70 e-folds of inflation, which leads to the third assumption, 
-that $V''(\phi)$ (as well as higher derivatives) must be sufficiently small in magnitude.
+The third assumption is that the potential is sufficiently flat that the attractor is inflationary, where $\dot\phi^2 < V$, (i.e. $w < -1/3$).
+Finally, the fourth assumption is that the second and third assumptions hold for at least 70 e-folds of inflation, which means that higher derivatives
+of the potential must be sufficiently small in magnitude.
 
-The second and third assumptions are captured by the smallness of the so called potential slow-roll parameters,
+The third, second and last assumptions are captured by the smallness of the so called potential slow-roll parameters,
 \begin{align}
 \epsilon_V &= \frac{\MMp}{2}\left(\frac{V'(\phi)}{V(\phi)}\right)^2,\\
 \eta_V &=  \MMp \frac{V''(\phi)}{V(\phi)},\\
-\xi_V &= M^4_{P} \frac{V'(\phi)}{V(\phi)}\frac{V'''(\phi)}{V(\phi)}.
+\xi_V &= M^4_{P} \frac{V'(\phi)}{V(\phi)}\frac{V'''(\phi)}{V(\phi)},
 \end{align}
-which must be $\ll 1$.
+respectively, which must all be well below unity.  The first assumption is an initial condition, and so cannot be associated with the potential.
 
 Below, we will use these parameters not just to characterize the amount of inflation, but also the spectrum
 of density perturbations imprinted on the CMB.  Since these perturbations are measured on known comoving scales, we
 can constrain the part of the inflationary potential where $\phi$ was rolling when the measured perturbations were generated.  Using assumptions about the
-scale of reheating, we can relate comoving scale of the perturbation to the amount of inflation since that scale left the Hubble horizon.
+scale of reheating, we can relate the comoving scale of the perturbation to the amount of inflation occurring after that scale left the Hubble horizon.  
 
-
+In the slow-roll regime,
+the Hubble rate is nearly constant during inflation, and so the amount of inflation is characterized by the growth of the scale factor.
 The logarithmic change in scale factor is given by
 \begin{align}
 \rmd N = \frac{\rmd a}{a} = \frac{\dot a}{a\dot\phi}\rmd\phi \approx \frac{3H^2}{V'(\phi)}\rmd\phi,
@@ -229,7 +231,7 @@ N = \frac{1}{\MMp}\int \frac{V(\phi)}{V'(\phi)}\rmd\phi.
 
 
 
-In the small field regime  $f < \Mp$, we can obtain a closed-form approximation for all inflationary observables.  To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
+In the small field regime, we can obtain a closed-form approximation for all inflationary observables.  To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
 \begin{align}
  \beta \leq \frac{3\pi f^2}{4\sqrt{2}\MMp~N_{\rm tot}}, 
  \end{align}
@@ -328,7 +330,7 @@ Assuming $f < \Mp$, the spectral index constraints by Planck \cite{Akrami:2018od
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/SRfraction.pdf}
-    \caption{The fraction of field space where inflation can take place.  Smaller values of $f$ require more fine-tuned initial field values, unless a 
+    \caption{The fraction of field space where inflation can take place, assuming parameter values compatible with Planck 2018.  Smaller values of $f$ require more fine-tuned initial field values, unless a 
     mechanism is used to deform a local minimum into the inflection point, either
     as a function of temperature or other fields.  For the observationally viable value of $\beta$ used here, the initial inflaton displacement must be fine-tuned by the factor $\Delta\phi/(2\pi f) \approx \sqrt{f/\Mp}$ in the small field regime.}
 \end{figure}
@@ -524,9 +526,9 @@ Because we are considering a single-field inflationary model, the only topologic
 
 \subsection{Domain wall geometry}
 One should expect that a positive tension domain wall would be gravitationally repulsive, owing to the concept of active gravitational mass.  Furthermore, 
-the gravitational repulsion should be position-independent far from the core of the defect, since the Green's function for a co-dimension one Newtonian
+the gravitational repulsion from a domain wall should be position-independent far from the core of the defect, since the Green's function for a co-dimension one Newtonian
 source is a linear potential.  Position-independent repulsion means the spacetime surrounding a domain wall should be flat, with the domain wall accelerating away from any inertial observer.  
-For example, an expanding bubble in Minkowski space appears repulsive to observers inside the bubble.  Thus we are led to the ISV ansatz
+For example, a Lorentz invariant bubble in Minkowski space appears repulsive to observers inside the bubble.  Thus we are led to the ISV ansatz
 of a domain wall as two copies of the interior of a bubble geometry, glued together on the surface of the bubble, as seen in the left-hand panel of Figure~\ref{fig:ISV}.
 \begin{figure}[htbp]
 \begin{center}
