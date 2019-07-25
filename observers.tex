@@ -141,7 +141,7 @@ Inflation takes place near the inflection point at $\phi = 0$, but only if the p
 The field range $f$ and steepness $\beta$ are constrained by observations of the spectral index $n_s$ and tensor-to-scalar 
 ratio $r$.   The scale of inflation $\Lambda$ is determined by the observed amplitude of density perturbations $A_s$.
  For large field $f/\Mp \geq \sqrt{3}/2$, topological eternal inflation generically occurs, as well as production of correspondingly large (and possibly detectable) tensor modes in the CMB.   
- For smaller $f/\Mp$ eternal inflation is impossible (see appendix \ref{sec:topo}).
+ For smaller $f/\Mp$, eternal inflation is impossible (see appendix \ref{sec:topo}).
 
 
 
@@ -159,48 +159,153 @@ For $f \ll \Mp$, we will focus on solutions starting with slow roll (fine tuned)
 this (say thermal effects which augment the potential and convert the inflection point into a local minimum of free energy), or that selection effects allow for the apparent fine-tuning of
 initial conditions.
 
-The lack of tensors seen by Planck constrains $f \leq 16\Mp$.  In the small field regime, CMB data fixes the dimensionless parameter $\beta \MMp/f^2~\sim~0.023$ which represents tuning of at least a few percent, and much more tuning for smaller $f/\Mp$.  
+For example, since the flatness problem is solved only by having a sufficient number of e-foldings of inflation, we argue that the (at least) percent-level tuning of parameters and initial conditions in
+the small field regime could be explained as a selection effect, since structure formation requires a solution to the flatness problem.
+
+
+The lack of tensor modes seen by Planck \cite{} constrains $f \leq 16\Mp$.  
+In the small field regime, CMB data fixes the dimensionless parameter $\beta \MMp/f^2~\sim~0.023$ which represents tuning of at least a few percent, and much more tuning for smaller $f/\Mp$.  
 %Initial conditions must additionally be  tuned to about one part in ...
 
 The scale of inflation $\Lambda^4$ does not represent significant fine-tuning, since it is a non-perturbative scale exponentially dependent on coupling constants.  
 The axion decay constant $f$ is not fine tuned in this case, since it is not super Planckian.
 
 
-For example, since the flatness problem is solved only by having a sufficient number of e-foldings of inflation, we argue that the (at least) percent-level tuning of parameters and initial conditions in
-the small field regime could be explained as a selection effect, since structure formation requires a solution to the flatness problem.
 
 
 
 
+\section{Inflation}
+Inflation solves the horizon and flatness problems \cite{guth} by proposing that a fluid with equation of state $-1< w < -1/3$ dominate the Einstein equations, 
+causing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to shrink by a factor perhaps as large as $e^{70}$. 
+Here, the Hubble rate is $H = \dot a/a$ and dots refer to derivatives with respect to cosmic time~$t$.  
+The most economical known example is provided by a single canonical scalar field $\phi$ dominated by the potential energy $V(\phi)$, 
+since the quantum fluctuations of the scalar field are sources of primordial curvature perturbations, which have been observed 
+in the cosmic microwave background and large scale structure\cite{mukhanov, steinhardt}.  
 
-\section{slow-roll inflation}
-Inflation solves the horizon and flatness problems by proposing that a fluid with equation of state $-1< w < -1/3$ dominate the Einstein equations, allowing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to
-shrink by a factor upwards of $e^{70}$. The most economical known example is provided by a single canonical scalar field $\phi$ dominated by its potential energy $V(\phi)$, since the quantum fluctuations of the scalar field can be the source of primordial curvature perturbations observed in the cosmic microwave background and large scale structure. 
+For each comoving scale $k$, the amplitude of the scalar field perturbation, $\delta \dot\phi = \frac{H^2}{2\pi}$, is frozen when that scale becomes ``super-horizon,'' i.e., when
+$(a H)^{-1}$ shrinks below $1/k$.  These field perturbations are converted to density perturbations $\delta \rho/\rho = \delta \dot\phi/\dot\phi_{\rm cl}$ after reheating, 
+when they begin to re-enter the horizon.  Here   $\dot\phi_{\rm cl}$ is the classical field velocity.
+Thus an inflationary model makes predictions for the primordial density perturbations on each comoving scale $k$ that depends on the Hubble rate around
+the time when $a H = k$, as well as the classical field velocity then.  For this reason, we are most interested in, for each $k$, the inflationary value of both $\dot\phi_{\rm cl}$ and $\left.H\right|_{k=(aH)}$ .  
+Note that $(a H)^{-1}$ is
+also the quantitative measure of the amount of inflation:  Working backwards in time from the end of inflation, when $(aH)^{-1}$ reaches its global minimum, 
+the remaining number of e-folds $N$ is defined by
+\begin{align}
+N = \ln\left(\frac{(a H)^{-1}}{(a H)^{-1}_{\rm min}}  \right),
+\end{align}
+where the values of $N$ relevant for CMB observations are $50 \lesssim N \lesssim 60$, plus a small offset that depends on the scale of reheating.
+
  
-The Friedmann equation and scalar equation of motion are
+The Friedmann equations and scalar equation of motion are
 \begin{align}
+\frac{\ddot a}{a} &= \frac{-1}{3\MMp}\left(\dot\phi^2 - V  \right),\\
 H^2 &= \frac{1}{3\MMp}\left(\tfrac{1}{2}\dot\phi^2 + V(\phi)\right),\\
-\ddot \phi &= -V'(\phi) - 3 H \dot \phi,\label{eq:scalareom}
+\ddot \phi &= -V'(\phi) - 3 H \dot \phi.  \label{eq:scalareom}
 \end{align}
-where the Hubble rate is $H = \dot a/a$ and dots refer to derivatives with respect to cosmic time $t$.  
-
-
-We will introduce the slow-roll approximation in the next subsection on  the small-field regime, followed by the more general
-slow-roll expansion.
-
-
-
-\subsection{Small-field regime}
-In small-field models of inflation, where $\phi$ changes by much less than a Planck mass,
-we must make four assumptions to obtain a slow-roll (attractor) model of inflation.  
-First, the field must be initially slow, such that the potential energy dominates the Einstein equations to yield $w < -1/3$, i.e. $H^2 \sim V/(3\MMp)$.
-Second, $V''(\phi)$ must be small in order for the Hubble friction in Eq.~(\ref{eq:scalareom}) to lead to an attractor, where 
-the friction has time to cancel the force $V'(\phi)$, allowing us to neglect the $\ddot\phi$ term and solve for 
+The solution to these equations of motion is called inflationary when the co-moving Hubble distance shrinks. 
+The effective equation of state of the scalar field is $w = \frac{\tfrac{1}{2}\dot\phi^2 - V(\phi)}{\tfrac{1}{2}\dot\phi^2 + V(\phi)}$, which means inflation occurs when
 \begin{align}
-\dot\phi \approx -\frac{V'(\phi)}{3 H}.
+\dot\phi^2 < V(\phi).
 \end{align}
-The third assumption is that the potential is sufficiently flat that the attractor is inflationary, where $\dot\phi^2 < V$, (i.e. $w < -1/3$).
-Finally, the fourth assumption is that the second and third assumptions hold for at least 70 e-folds of inflation, which means that higher derivatives
+
+
+ %Solving the horizon and flatness problems requires $(a H)^{-1}$ to shrink by a sufficient factor, usually $e^{60}$  - $e^{70}$, with a smaller amount needed if the reheating scale is well below the GUT scale.
+An important property of inflationary solutions is that, in addition to diluting away any initial spatial curvature or inhomogeneities, 
+they possess an attractor, which allows for predictions which are to some extent independent of the initial conditions.  
+Changes to the initial conditions might affect the universe on unobservably large scales, while the local properties we can observe 
+are dependent only on the model parameters.
+
+Large field inflation, where the scalar field evolves over a super-Planckian field range, has the advantage that the inflationary attractor 
+is reached from a wider class of initial conditions.  Small field inflation requires much more tuning of the initial conditions in order to 
+guarantee that the solution is indeed inflationary.  In both cases, the potential must be fine-tuned from an effective field theory point of view.  
+For the large field case, the potential must be tuned to be flat over a super-Planckian field range, which is unnatural \cite{banks,swampland} for 
+EFTs embedded in string theory.  In the small field case, the potential must be tuned to be extremely flat in some region, 
+and must also have percent-level tunings of higher derivatives there.
+
+
+For small field inflation, the needed flatness guarantees that the attractor solution has a nearly constant Hubble rate, which allows us to 
+analytically solve the model using the so-called slow-roll approximation, which we introduce in the next subsection.  
+Later we will review the slow-roll expansion \cite{Liddle:1994dx}, which lets us compute the inflationary observables for any solution to the Friedmann equations, 
+demonstrating rather than assuming attractor behavior.  
+We will use numerical solutions to the Friedmann equations, since the Hubble rate can in principle vary by many orders of magnitude during inflation.
+
+
+The primary quantity we will calculate is the Hubble rate as a function of the remaining number of e-folds of inflation
+\begin{align}
+H(N)
+\end{align}
+
+
+\subsection{Small field inflation}
+
+The slow roll approximation applies when friction dominates the evolution of the inflaton, meaning $\ddot \phi$ can be consistently neglected in  Eq.~(\ref{eq:scalareom}).  
+This means that the first-order approximate solution
+\begin{align}
+\dot\phi \approx -\frac{V'(\phi)}{3 H},
+\end{align}
+is an attractor of the full equations of motion.
+
+
+Following an argument by Lyth \cite{lythbound}, we can use the attractor solution to determine the field variation (in reduced Planck units) per e-fold:
+\begin{align}
+\Mp^{-1}\frac{\rmd \phi}{\rmd N} &= -\Mp^{-1}\dot\phi~\frac{\dot a}{\ddot a} = -\dot\phi \frac{3\Mp H}{V-\dot\phi^2},\\
+&\approx \frac{V'(\phi)\Mp}{V-\dot\phi^2}.
+\end{align}
+In the small field regime, where the total field variation $\Delta \phi < \Mp$ it must be that (averaged along the field trajectory)
+\begin{align}
+\Mp V'(\phi) <  \frac{V - \dot\phi^2}{N} <  \frac{V}{N}.
+\end{align} 
+Using the slow-roll solution and the fact that $N \gg 1$, we can then say that, on average,
+\begin{align}
+\dot\phi^2 \ll V.
+\end{align}
+
+Thus small field inflation last long enough only if $\dot\phi^2 \ll V(\phi)$, which means $H^2 \approx V/(3\MMp)$ and $w \approx -1$.
+Because $H$ is nearly constant during small field inflation, we will be able to analytically approximate the CMB observables.
+
+
+It will be convenient to define the first two potential slow-roll parameters,
+\begin{align}
+\epsilon_V &= \frac{\MMp}{2}\left(\frac{V'(\phi)}{V(\phi)}\right)^2,\\
+\eta_V &=  \MMp \frac{V''(\phi)}{V(\phi)}.
+\end{align}
+
+
+
+It follows form the slow-roll solution that the consistency of the slow-roll approximation, namely that $\left|\ddot \phi/V'(\phi)\right| \ll 1$, requires
+\begin{align}
+\eta_V/3 - \epsilon_V \ll 1.
+\end{align}
+
+
+
+
+
+
+
+We can use the slow-roll approximation to show that the field excursion per e-fold of expansion $-d\phi/\rmd \ln a = \rmd\phi/\rmd N$ obeys
+\begin{align}
+\rmd \phi \approx \frac{V'}{3 H^2} \rmd N.
+\end{align}
+
+and so if we bound $\Delta \phi \leq \Mp$, the large total number of e-folds $N \sim 60$ implies a small slow-roll parameter
+\begin{align}
+\epsilon_V \lesssim \frac{2}{N^2}.
+\end{align}
+
+
+we must make four assumptions to obtain a slow-roll (attractor) model of inflation.  
+First, the field must be initially slow, such that the potential energy dominates the Einstein equations to yield $w < -1/3$.
+Second, $V''(\phi)$ must be small in order for the friction-dominated solution of Eq.~(\ref{eq:scalareom})
+\begin{align}
+\dot\phi \approx -\frac{V'(\phi)}{3 H},
+\end{align}
+to be an attractor, meaning we can consistently neglect the $\ddot \phi$ term.
+
+The third assumption is that the potential is extremely flat, so that the inflationary attractor is quasi-de Sitter.  
+This means the initial assumption $\dot\phi^2 < V$ leads to $\dot\phi^2 \ll V$, so that $H^2 \approx V/(3\MMp)$ is very nearly constant during inflation.
+Finally, the fourth assumption is that the second and third assumptions hold for the final 70 e-folds of inflation, which means that higher derivatives
 of the potential must be sufficiently small in magnitude.
 
 The third, second and last assumptions are captured by the smallness of the so called potential slow-roll parameters,
@@ -209,18 +314,18 @@ The third, second and last assumptions are captured by the smallness of the so c
 \eta_V &=  \MMp \frac{V''(\phi)}{V(\phi)},\\
 \xi_V &= M^4_{P} \frac{V'(\phi)}{V(\phi)}\frac{V'''(\phi)}{V(\phi)},
 \end{align}
-respectively, which must all be well below unity.  The first assumption is an initial condition, and so cannot be associated with the potential.
+respectively, which must all be well below unity.  The first assumption is an initial condition, not related to the potential.
 
 Below, we will use these parameters not just to characterize the amount of inflation, but also the spectrum
 of density perturbations imprinted on the CMB.  Since these perturbations are measured on known comoving scales, we
 can constrain the part of the inflationary potential where $\phi$ was rolling when the measured perturbations were generated.  Using assumptions about the
 scale of reheating, we can relate the comoving scale of the perturbation to the amount of inflation occurring after that scale left the Hubble horizon.  
 
-In the slow-roll regime,
-the Hubble rate is nearly constant during inflation, and so the amount of inflation is characterized by the growth of the scale factor.
+In the slow-roll regime, the Hubble rate is nearly constant during inflation, and so the amount of inflation, $N \approx \log\left((a H)^{-1}\right)$, is characterized 
+almost entirely  by the decrease in the scale factor, working backwards in time from reheating.
 The logarithmic change in scale factor is given by
 \begin{align}
-\rmd N = \frac{\rmd a}{a} = \frac{\dot a}{a\dot\phi}\rmd\phi \approx \frac{3H^2}{V'(\phi)}\rmd\phi,
+\rmd N = -\frac{\rmd a}{a} = -\frac{\dot a}{a\dot\phi}\rmd\phi \approx \frac{3H^2}{V'(\phi)}\rmd\phi,
 \end{align}
 and so the number of e-foldings $N(\phi)$ is given by
 \begin{align}
@@ -231,7 +336,29 @@ N = \frac{1}{\MMp}\int \frac{V(\phi)}{V'(\phi)}\rmd\phi.
 
 
 
-In the small field regime, we can obtain a closed-form approximation for all inflationary observables.  To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
+In the small field regime, $f <\sqrt{3}\Mp/2$, any viable model of inflation will obey the slow roll approximation,
+which will allow us to obtain a closed-form approximation for all inflationary observables.  
+
+
+Since $V(\phi)$ is then nearly constant, 
+\begin{align}
+N \approx \frac{V}{\MMp}\int\frac{\rmd\phi}{V'(\phi)},
+\end{align}
+and we can Taylor expand $V'(\phi)$ to obtain a closed-form approximation for the value of $\phi$ corresponding to $N_\ast$ e-folds before the end of inflation.
+
+
+For our model, the result is
+\begin{align}
+\phi_\ast/f \approx -\sqrt{\frac{2}{3}}\beta \cot\left(\frac{2\sqrt{2}\beta\MMp}{3f^2}N_\ast\right) + {\cal O}(\beta^2/\sqrt{f})
+\end{align}  
+This, in turn provides a closed-form solution to all of the potential slow-roll parameters
+evaluated at $N_\ast$.
+
+
+
+
+
+To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
 \begin{align}
  \beta \leq \frac{3\pi f^2}{4\sqrt{2}\MMp~N_{\rm tot}}, 
  \end{align}
@@ -241,16 +368,12 @@ which means the Hubble rate only decreases by the factor
 H_{\rm end}/H_{\rm start} \sim 1-\left(\frac{f}{\sqrt{6}\Mp}\right)^{3/2}
 \end{align}
 during inflation.  
-Since $V(\phi)$ is nearly constant, 
-\begin{align}
-N \approx \frac{V}{\MMp}\int\frac{\rmd\phi}{V'(\phi)},
-\end{align}
-and we can Taylor expand $V'(\phi)$ to obtain a closed-form approximation for the value of $\phi$ corresponding to $N_\ast$ e-folds before the end of inflation:
-\begin{align}
-\phi_\ast/f \approx -\sqrt{\frac{2}{3}}\beta \cot\left(\frac{2\sqrt{2}\beta\MMp}{3f^2}N_\ast\right) + {\cal O}(\beta^2/\sqrt{f})
-\end{align}  
-This, in turn provides a closed-form solution to all of the potential slow-roll parameters
-evaluated at $N_\ast$.
+
+
+
+
+
+
 
 We find that the slow-roll parameters depend
 on the parameter $\beta$ is only, to lowest order in $f/\Mp$, through the combination $\beta/f^2$.  For example, the total number of e-folds of inflation starting from the inflection point is
