@@ -140,8 +140,8 @@ The slope at the inflection point is proportional to $\beta^2$.
 Inflation takes place near the inflection point at $\phi = 0$, but only if the potential is flat enough there ($\beta \ll 1$ or $f \gg \Mp$).
 The field range $f$ and steepness $\beta$ are constrained by observations of the spectral index $n_s$ and tensor-to-scalar 
 ratio $r$.   The scale of inflation $\Lambda$ is determined by the observed amplitude of density perturbations $A_s$.
- For large field $f/\Mp \geq \sqrt{3}/2$, topological eternal inflation generically occurs, as well as production of correspondingly large (and possibly detectable) tensor modes in the CMB.   
- For smaller $f/\Mp$, eternal inflation is impossible (see appendix \ref{sec:topo}).
+If $f/\Mp \geq \sqrt{3}/2$, topological eternal inflation generically occurs, as well as production of correspondingly large (and possibly detectable) tensor modes in the CMB.   
+ Otherwise, eternal inflation is impossible (see appendix \ref{sec:topo}).
 
 
 
@@ -177,11 +177,28 @@ The axion decay constant $f$ is not fine tuned in this case, since it is not sup
 
 \section{Inflation}
 Inflation solves the horizon and flatness problems \cite{guth} by proposing that a fluid with equation of state $-1< w < -1/3$ dominate the Einstein equations, 
-causing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to shrink by a factor perhaps as large as $e^{70}$. 
+causing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to shrink by a factor of $e^{70}$ or more. 
 Here, the Hubble rate is $H = \dot a/a$ and dots refer to derivatives with respect to cosmic time~$t$.  
 The most economical known example is provided by a single canonical scalar field $\phi$ dominated by the potential energy $V(\phi)$, 
 since the quantum fluctuations of the scalar field are sources of primordial curvature perturbations, which have been observed 
 in the cosmic microwave background and large scale structure\cite{mukhanov, steinhardt}.  
+
+ 
+The Friedmann equations and scalar equation of motion are
+\begin{align}
+\frac{\ddot a}{a} &= \frac{-1}{3\MMp}\left(\dot\phi^2 - V  \right),\\
+H^2 &= \frac{1}{3\MMp}\left(\tfrac{1}{2}\dot\phi^2 + V(\phi)\right),\\
+\ddot \phi &= -V'(\phi) - 3 H \dot \phi.  \label{eq:scalareom}
+\end{align}
+The solution to these equations of motion is called inflationary when the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ shrinks, meaning $\ddot a > 0$. 
+The effective equation of state of the scalar field is $w = \frac{\tfrac{1}{2}\dot\phi^2 - V(\phi)}{\tfrac{1}{2}\dot\phi^2 + V(\phi)}$, which means inflation occurs when
+\begin{align}
+\dot\phi^2 < V(\phi).
+\end{align}
+
+
+ %Solving the horizon and flatness problems requires $(a H)^{-1}$ to shrink by a sufficient factor, usually $e^{60}$  - $e^{70}$, with a smaller amount needed if the reheating scale is well below the GUT scale.
+
 
 For each comoving scale $k$, the amplitude of the scalar field perturbation, $\delta \dot\phi = \frac{H^2}{2\pi}$, is frozen when that scale becomes ``super-horizon,'' i.e., when
 $(a H)^{-1}$ shrinks below $1/k$.  These field perturbations are converted to density perturbations $\delta \rho/\rho = \delta \dot\phi/\dot\phi_{\rm cl}$ after reheating, 
@@ -196,21 +213,100 @@ N = \ln\left(\frac{(a H)^{-1}}{(a H)^{-1}_{\rm min}}  \right),
 \end{align}
 where the values of $N$ relevant for CMB observations are $50 \lesssim N \lesssim 60$, plus a small offset that depends on the scale of reheating.
 
- 
-The Friedmann equations and scalar equation of motion are
+
+\subsection{Perturbations and CMB observables}
+The amplitude of the inflaton perturbation on a given comoving scale $k$ is given by the Hubble rate when that
+scale exits the Hubble ``horizon.''   The inflaton perturbation is also a perturbation in the time of reheating, after which it is converted to a density perturbations with
+amplitude
 \begin{align}
-\frac{\ddot a}{a} &= \frac{-1}{3\MMp}\left(\dot\phi^2 - V  \right),\\
-H^2 &= \frac{1}{3\MMp}\left(\tfrac{1}{2}\dot\phi^2 + V(\phi)\right),\\
-\ddot \phi &= -V'(\phi) - 3 H \dot \phi.  \label{eq:scalareom}
+{\cal P}_{\cal R}^{1/2}(k) \approx \left.\frac{H^2(\phi)}{2\pi|\dot\phi|}\right|_{k = a H}.
 \end{align}
-The solution to these equations of motion is called inflationary when the co-moving Hubble distance shrinks. 
-The effective equation of state of the scalar field is $w = \frac{\tfrac{1}{2}\dot\phi^2 - V(\phi)}{\tfrac{1}{2}\dot\phi^2 + V(\phi)}$, which means inflation occurs when
+Here the classical field velocity $\dot\phi$ and Hubble rate $H$ are evaluated at the moment when the comoving length scale of interest $1/k$ crosses the monotonically decreasing ``horizon'' $(aH)^{-1}$.
+This spectrum of density perturbations is observed in the CMB to be well characterized by the amplitude $A_s$, spectral index $n_s$, and running $\alpha_s$ and via
 \begin{align}
-\dot\phi^2 < V(\phi).
+ {\cal P}_{\cal R}(k) = A_s(k_\ast)\left(\frac{k}{k_\ast}\right)^{n_s - 1 + \frac{\alpha_s}{2}\ln(k/k_\ast) + ...},
+\end{align}
+where $k_\ast$ is an arbitrary pivot scale chosen in the observable range of the CMB sky.
+
+A similar expression holds for tensor perturbations, 
+\begin{align}
+{\cal P}_{t}^{1/2}(k) \approx \left.\frac{H^2(\phi)}{2\pi\MMp}\right|_{k = a H},
+\end{align}
+but we will only be interested in the tensor to scalar ratio
+\begin{align}
+r = \frac{A_t(k_\ast)}{A_s(k_\ast)}.
+\end{align}
+In order to derive the CMB constraints on the model, we will need to determine 
+\begin{enumerate}
+\item when the comoving scale $k_\ast$ was inflated outside of the ``horizon,''
+\item what the Hubble rate was around that time, and
+\item what the classical field velocity $\dot \phi$ was at that time.
+\end{enumerate}
+In fact, we will be able to determine all three of these by solving the scalar and Friedmann equations for $H(\phi)$.
+
+
+\subsection{General formalism}
+
+
+We follow the Hubble slow-roll formalization of \cite{Liddle:1994dx}.  
+
+
+Taking a time derivative of the Friedmann equation 
+and eliminating $\ddot \phi$ using the scalar equation of motion results in
+\begin{align}
+\dot H = -\frac{\dot \phi^2}{2\MMp}.
+\end{align}
+Dividing this expression by $\dot\phi$ yields
+\begin{align}\label{eq:phidot}
+H'(\phi) = -\frac{\dot \phi}{2\MMp},
+\end{align}
+which allows us to eliminate $\dot \phi$ and instead use
+the inflaton $\phi$ as a time variable during inflation, when $\phi_i \leq \phi \leq \phi_f$.  The Friedmann equation becomes
+\begin{align}\label{eq:Heom}
+H'(\phi)^2 = \frac{3 H^2(\phi)}{2\MMp} - \frac{V(\phi)}{2 M^4_P},
+\end{align}
+with initial condition
+\begin{align}
+H(\phi_i) = \sqrt{\frac{1}{3\MMp}\left[\tfrac{1}{2}\dot \phi_i^2 + V(\phi_i)  \right]}.
+\end{align}
+We numerically integrate\footnote{For numerical stability, we integrate the equivalent equation $T'(\phi) = \sqrt{6T\left(T+V\right)}/\Mp - V'(\phi)$, where $T(\phi) = 3\MMp H^2(\phi) - V(\phi)$ is the kinetic energy density of the inflaton.}
+the Friedmann equation (\ref{eq:Heom}) using the slow-roll initial condition ${\dot \phi_i = -V'(\phi_i)/[3H(\phi_i)]}$.  Inflation ends when the 
+comoving Hubble distance $\left(a H\right)^{-1}$ stops decreasing, i.e. when ${\ddot a(t) \leq 0}$.  This moment defines $\phi_f$. 
+
+The Hubble slow-roll parameters are defined by
+\begin{align}
+\epsilon_H &= 2\MMp \left(\frac{H'(\phi)}{H(\phi)}\right)^2,\\
+\eta_H &= 2\MMp \frac{H''(\phi)}{H(\phi)},
+\end{align}
+and so the end of inflation also coincides with ${\epsilon_H(\phi) \to 1}$.  
+
+The remaining number of e-foldings between $\phi$ and $\phi_f$ is defined by the ratio of comoving Hubble distances, 
+\begin{align}
+N(\phi) = \ln\left(\frac{a(\phi_f) H(\phi_f)}{a(\phi) H(\phi)}\right),
+\end{align}
+which we compute by numerically integrating:
+\begin{align}
+N(\phi) = \frac{1}{\sqrt{2\MMp}}\int_{\phi}^{\phi_f} \frac{1-\epsilon_H(\phi)}{\sqrt{\epsilon_H(\phi)}}\rmd \phi .
 \end{align}
 
 
- %Solving the horizon and flatness problems requires $(a H)^{-1}$ to shrink by a sufficient factor, usually $e^{60}$  - $e^{70}$, with a smaller amount needed if the reheating scale is well below the GUT scale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 An important property of inflationary solutions is that, in addition to diluting away any initial spatial curvature or inhomogeneities, 
 they possess an attractor, which allows for predictions which are to some extent independent of the initial conditions.  
 Changes to the initial conditions might affect the universe on unobservably large scales, while the local properties we can observe 
@@ -231,13 +327,76 @@ demonstrating rather than assuming attractor behavior.
 We will use numerical solutions to the Friedmann equations, since the Hubble rate can in principle vary by many orders of magnitude during inflation.
 
 
-The primary quantity we will calculate is the Hubble rate as a function of the remaining number of e-folds of inflation
+
+
+
+
+
+
+
+\subsection{observables}
+Primordial perturbations at each comoving scale directly 
+generate (via a cosmological model like $\Lambda_{\rm CDM}$) CMB and large-scale structure observables.   In the case of single-field inflation, these primordial perturbations can 
+be described entirely by the Hubble rate and Hubble slow-roll parameters.
+
+The quantum fluctuation of both the metric and inflaton on a given comoving scale $k$ are generated when the wavelength is stretched beyond the Hubble distance, $(a H)^{-1}$.
+Since the comoving Hubble distance decreases monotonically during inflation, we can relate each comoving scale $k$ to a single value of $\phi$ (and thus $N(\phi)$). 
 \begin{align}
-H(N)
+N(\phi) \longleftrightarrow \phi \longleftrightarrow k = a(\phi) H(\phi).
+\end{align}  
+
+
+
+ 
+
+We may express the slow-roll parameters either as a function of $\phi$, as a function of $N$,
+or as a function of $k$, the latter being more directly related to CMB angular scales.  
+The amplitude of curvature perturbations on comoving scale ${k = a(\phi) H(\phi)}$ is \cite{Stewart:1993bc}
+\begin{align}
+{\cal P}_{\cal R}^{\frac{1}{2}}(k) = 2^{\nu - \tfrac{3}{2}}\frac{\Gamma(\nu)}{\Gamma(\tfrac{3}{2})}\left[1-\epsilon_H(\phi)\right]^{\nu - \tfrac{1}{2}}\left.\frac{H^2(\phi)}{2\pi|\dot\phi|}\right. , 
+\end{align}
+where $\nu = \frac{1+\epsilon_H(\phi) - \eta_H(\phi)}{1-\epsilon_H(\phi)} + \frac{1}{2}$, and $\dot \phi$ can be solved for using equation (\ref{eq:phidot}).
+Then the measured amplitude at an arbitrarily chosen pivot scale $k_\ast = a(\phi_\ast) H(\phi_\ast)$ is given by
+\begin{align}
+A_s = {\cal P}_{\cal R}(k_\ast) .
+\end{align}
+Near the pivot scale, we can characterize the power spectrum of scalar perturbations by essentially its first three Taylor coefficients, $A_s, n_s, $ and $\alpha_s$ via
+\begin{align}
+ {\cal P}_{\cal R}(k) = A_s(k_\ast)\left(\frac{k}{k_\ast}\right)^{n_s - 1 + \frac{\alpha_s}{2}\ln(k/k_\ast) + ...}
+\end{align}
+A similar expansion holds for tensor perturbations, but we will only be interested in the tensor to scalar ratio
+\begin{align}
+r = \frac{A_t(k_\ast)}{A_s(k_\ast)}.
 \end{align}
 
+The scalar spectral index, tensor-to-scalar ratio, and scalar running are given in terms of the slow-roll parameters up to 2nd order by \cite{Easther:2006tv}
+\begin{align}
+n_s &= 1 - 4\epsilon_H + 2\eta_H - 2(1+{\cal C})\epsilon_H^2 - \frac{1}{2}(3-5{\cal C})\epsilon_H\eta_H + \frac{1}{2}\left(3-{\cal C}\right)\xi_H ,\\
+r &= 16\epsilon_H\left[1+2{\cal C}(\epsilon_H-\eta_H)  \right],\\
+\alpha_s &= \frac{-1}{1-\epsilon_H}\left( 2\xi_H-8 \epsilon_H^2 - 10 \epsilon_H\eta_H  + \frac{7{\cal C}-9}{2}\epsilon_H\xi_H + \frac{3-{\cal C}}{2}\eta_H\xi_H\right),
+\end{align}
+where ${\cal C} = 4(\ln 2 + \gamma_E)-5$.
+Since $n_s(\phi_\ast)$, $r(\phi_\ast)$, and $N(\phi_\ast)$ only depend on the shape of the potential and are independent of the scale of inflation, $\Lambda$,
+we can fix $\Lambda$ via measurements of $A_s$ without significantly affecting $n_s$ and $r$.
+(A small dependence of $n_s$ and $r$ on $\Lambda$ is introduced since the value of $\phi_\ast$ when they are measured does have logarithmic dependence on $\Lambda$, roughly corresponding
+to $50 \lesssim N_\ast \lesssim 60$.)
 
-\subsection{Small field inflation}
+%We completely fix $\Lambda$ by the scalar amplitude $A_s$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Slow roll inflation}
 
 The slow roll approximation applies when friction dominates the evolution of the inflaton, meaning $\ddot \phi$ can be consistently neglected in  Eq.~(\ref{eq:scalareom}).  
 This means that the first-order approximate solution
@@ -252,6 +411,9 @@ Following an argument by Lyth \cite{lythbound}, we can use the attractor solutio
 \Mp^{-1}\frac{\rmd \phi}{\rmd N} &= -\Mp^{-1}\dot\phi~\frac{\dot a}{\ddot a} = -\dot\phi \frac{3\Mp H}{V-\dot\phi^2},\\
 &\approx \frac{V'(\phi)\Mp}{V-\dot\phi^2}.
 \end{align}
+
+
+\subsection{Small field inflation}
 In the small field regime, where the total field variation $\Delta \phi < \Mp$ it must be that (averaged along the field trajectory)
 \begin{align}
 \Mp V'(\phi) <  \frac{V - \dot\phi^2}{N} <  \frac{V}{N}.
@@ -450,13 +612,6 @@ Assuming $f < \Mp$, the spectral index constraints by Planck \cite{Akrami:2018od
 
 
 
-\begin{figure}[!h]
-  \centering
-    \includegraphics[width=0.7\textwidth]{figures/SRfraction.pdf}
-    \caption{The fraction of field space where inflation can take place, assuming parameter values compatible with Planck 2018.  Smaller values of $f$ require more fine-tuned initial field values, unless a 
-    mechanism is used to deform a local minimum into the inflection point, either
-    as a function of temperature or other fields.  For the observationally viable value of $\beta$ used here, the initial inflaton displacement must be fine-tuned by the factor $\Delta\phi/(2\pi f) \approx \sqrt{f/\Mp}$ in the small field regime.}
-\end{figure}
 
 
 
@@ -464,122 +619,12 @@ Assuming $f < \Mp$, the spectral index constraints by Planck \cite{Akrami:2018od
 
 
 
-\subsection{More general formalism}
-
-
-We follow the Hubble slow-roll formalization of \cite{Liddle:1994dx}.  
-
-
-Taking a time derivative of the Friedmann equation 
-and eliminating $\ddot \phi$ using the scalar equation of motion results in
-\begin{align}
-\dot H = -\frac{\dot \phi^2}{2\MMp}.
-\end{align}
-Dividing this expression by $\dot\phi$ yields
-\begin{align}\label{eq:phidot}
-H'(\phi) = -\frac{\dot \phi}{2\MMp},
-\end{align}
-which allows us to eliminate $\dot \phi$ and instead use
-the inflaton $\phi$ as a time variable during inflation, when $\phi_i \leq \phi \leq \phi_f$.  The Friedmann equation becomes
-\begin{align}\label{eq:Heom}
-H'(\phi)^2 = \frac{3 H^2(\phi)}{2\MMp} - \frac{V(\phi)}{2 M^4_P},
-\end{align}
-with initial condition
-\begin{align}
-H(\phi_i) = \sqrt{\frac{1}{3\MMp}\left[\tfrac{1}{2}\dot \phi_i^2 + V(\phi_i)  \right]}.
-\end{align}
-We numerically integrate\footnote{For numerical stability, we integrate the equivalent equation $T'(\phi) = \sqrt{6T\left(T+V\right)}/\Mp - V'(\phi)$, where $T(\phi) = 3\MMp H^2(\phi) - V(\phi)$ is the kinetic energy density of the inflaton.}
-the Friedmann equation (\ref{eq:Heom}) using the (approximate) attractor initial condition ${\dot \phi_i = -V'(\phi_i)/[3H(\phi_i)]}$.  Inflation ends when the 
-comoving Hubble distance $\left(a H\right)^{-1}$ stops decreasing, i.e. when ${\ddot a(t) \leq 0}$.  This moment defines $\phi_f$. 
-
-The Hubble slow-roll parameters are defined by
-\begin{align}
-\epsilon_H &= 2\MMp \left(\frac{H'(\phi)}{H(\phi)}\right)^2,\\
-\eta_H &= 2\MMp \frac{H''(\phi)}{H(\phi)},
-\end{align}
-and so the end of inflation also coincides with ${\epsilon_H(\phi) \to 1}$.  
-
-The remaining number of e-foldings between $\phi$ and $\phi_f$ is defined by the ratio of comoving Hubble distances, 
-\begin{align}
-N(\phi) = \ln\left(\frac{a(\phi_f) H(\phi_f)}{a(\phi) H(\phi)}\right),
-\end{align}
-which we compute by numerically integrating:
-\begin{align}
-N(\phi) = \frac{1}{\sqrt{2\MMp}}\int_{\phi}^{\phi_f} \frac{1-\epsilon_H(\phi)}{\sqrt{\epsilon_H(\phi)}}\rmd \phi .
-\end{align}
-
-
-\subsection{Perturbations}
-The amplitude of the inflaton perturbation on a given comoving scale $k$ is given by the Hubble rate when that
-scale exits the Hubble ``horizon.''   The inflaton perturbation is also a perturbation in the time of reheating, after which it is converted to a density perturbations with
-amplitude
-\begin{align}
-{\cal P}_{\cal R}^{1/2}(k) \approx \left.\frac{H^2(\phi)}{2\pi|\dot\phi|}\right|_{k = a H}.
-\end{align}
-Here the classical field velocity $\dot\phi$ and Hubble rate $H$ are evaluated at the moment when the comoving length scale of interest $1/k$ crosses the monotonically decreasing ``horizon'' $(aH)^{-1}$.
-This spectrum of density perturbations is observed in the CMB to be well characterized by the amplitude $A_s$, spectral index $n_s$, and running $\alpha_s$ and via
-\begin{align}
- {\cal P}_{\cal R}(k) = A_s(k_\ast)\left(\frac{k}{k_\ast}\right)^{n_s - 1 + \frac{\alpha_s}{2}\ln(k/k_\ast) + ...}
-\end{align}
-
-A similar expression holds for tensor perturbations, 
-\begin{align}
-{\cal P}_{t}^{1/2}(k) \approx \left.\frac{H^2(\phi)}{2\pi\MMp}\right|_{k = a H},
-\end{align}
-but we will only be interested in the tensor to scalar ratio
-\begin{align}
-r = \frac{A_t(k_\ast)}{A_s(k_\ast)}.
-\end{align}
-
-
-\subsection{observables}
-Primordial perturbations at each comoving scale directly 
-generate (via a cosmological model like $\Lambda_{\rm CDM}$) CMB and large-scale structure observables.   In the case of single-field inflation, these primordial perturbations can 
-be described entirely by the Hubble rate and Hubble slow-roll parameters.
-
-The quantum fluctuation of both the metric and inflaton on a given comoving scale $k$ are generated when the wavelength is stretched beyond the Hubble distance, $(a H)^{-1}$.
-Since the comoving Hubble distance decreases monotonically during inflation, we can relate each comoving scale $k$ to a single value of $\phi$ (and thus $N(\phi)$). 
-\begin{align}
-N(\phi) \longleftrightarrow \phi \longleftrightarrow k = a(\phi) H(\phi).
-\end{align}  
 
 
 
- 
 
-We may express the slow-roll parameters either as a function of $\phi$, as a function of $N$,
-or as a function of $k$, the latter being more directly related to CMB angular scales.  
-The amplitude of curvature perturbations on comoving scale ${k = a(\phi) H(\phi)}$ is \cite{Stewart:1993bc}
-\begin{align}
-{\cal P}_{\cal R}^{\frac{1}{2}}(k) = 2^{\nu - \tfrac{3}{2}}\frac{\Gamma(\nu)}{\Gamma(\tfrac{3}{2})}\left[1-\epsilon_H(\phi)\right]^{\nu - \tfrac{1}{2}}\left.\frac{H^2(\phi)}{2\pi|\dot\phi|}\right. , 
-\end{align}
-where $\nu = \frac{1+\epsilon_H(\phi) - \eta_H(\phi)}{1-\epsilon_H(\phi)} + \frac{1}{2}$, and $\dot \phi$ can be solved for using equation (\ref{eq:phidot}).
-Then the measured amplitude at an arbitrarily chosen pivot scale $k_\ast = a(\phi_\ast) H(\phi_\ast)$ is given by
-\begin{align}
-A_s = {\cal P}_{\cal R}(k_\ast) .
-\end{align}
-Near the pivot scale, we can characterize the power spectrum of scalar perturbations by essentially its first three Taylor coefficients, $A_s, n_s, $ and $\alpha_s$ via
-\begin{align}
- {\cal P}_{\cal R}(k) = A_s(k_\ast)\left(\frac{k}{k_\ast}\right)^{n_s - 1 + \frac{\alpha_s}{2}\ln(k/k_\ast) + ...}
-\end{align}
-A similar expansion holds for tensor perturbations, but we will only be interested in the tensor to scalar ratio
-\begin{align}
-r = \frac{A_t(k_\ast)}{A_s(k_\ast)}.
-\end{align}
 
-The scalar spectral index, tensor-to-scalar ratio, and scalar running are given in terms of the slow-roll parameters up to 2nd order by \cite{Easther:2006tv}
-\begin{align}
-n_s &= 1 - 4\epsilon_H + 2\eta_H - 2(1+{\cal C})\epsilon_H^2 - \frac{1}{2}(3-5{\cal C})\epsilon_H\eta_H + \frac{1}{2}\left(3-{\cal C}\right)\xi_H ,\\
-r &= 16\epsilon_H\left[1+2{\cal C}(\epsilon_H-\eta_H)  \right],\\
-\alpha_s &= \frac{-1}{1-\epsilon_H}\left( 2\xi_H-8 \epsilon_H^2 - 10 \epsilon_H\eta_H  + \frac{7{\cal C}-9}{2}\epsilon_H\xi_H + \frac{3-{\cal C}}{2}\eta_H\xi_H\right),
-\end{align}
-where ${\cal C} = 4(\ln 2 + \gamma_E)-5$.
-Since $n_s(\phi_\ast)$, $r(\phi_\ast)$, and $N(\phi_\ast)$ only depend on the shape of the potential and are independent of the scale of inflation, $\Lambda$,
-we can fix $\Lambda$ via measurements of $A_s$ without significantly affecting $n_s$ and $r$.
-(A small dependence of $n_s$ and $r$ on $\Lambda$ is introduced since the value of $\phi_\ast$ when they are measured does have logarithmic dependence on $\Lambda$, roughly corresponding
-to $50 \lesssim N_\ast \lesssim 60$.)
 
-%We completely fix $\Lambda$ by the scalar amplitude $A_s$.
 
 \subsection{Fine tuning of parameters}
 Our results are similar to those found in \cite{Musoke:2017frr}, which considered inflection point inflation in a quartic potential.  In particular, for $f = \Mp/10$, the slope parameter at the inflection point, $\beta$, must be
@@ -592,7 +637,14 @@ For $f > 100 \Mp$, the model is indistinguishable from chaotic $m^2\phi^2$ infla
 
 The main constraint in this case comes from observations indicating the tensor-to-scalar ratio obeys $r \lesssim 0.06$.
 
-Without considering the implications of eternal inflation on the number of observers, the question of what the true value of $f$ is 
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=0.7\textwidth]{figures/SRfraction.pdf}
+    \caption{The fraction of field space where inflation can take place, assuming parameter values compatible with Planck 2018.  Smaller values of $f$ require more fine-tuned initial field values, unless a 
+    mechanism is used to deform a local minimum into the inflection point, either
+    as a function of temperature or other fields.  For the observationally viable value of $\beta$ used here, the initial inflaton displacement must be fine-tuned by the factor $\Delta\phi/(2\pi f) \approx \sqrt{f/\Mp}$ in the small field regime.}
+\end{figure}
+
 
 
 \begin{figure}[!h]
