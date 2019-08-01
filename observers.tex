@@ -45,7 +45,7 @@ The way this works is that within the model class, the detection of primordial g
 guaranteed to have occurred.  This is because the model parameters that allow for detection of primordial gravitational waves (tensor to scalar ratio $r > 10^{-6}$) 
 also require topological inflation to be eternal.  Since topological inflation occurs for any initial conditions that straddle the local maximum, the probability
 for eternal inflation to occur is unity.\footnote{In any viable model, initial conditions can be tuned such that eternal inflation never occurs, although the choice may be 
-difficult to justify.  For example, the inflaton can be started homogeneously from rest 70 e-folds from the bottom
+difficult to justify.  For example, the inflaton can be started homogeneously from rest 60 e-folds from the bottom
 of the potential.  If the initial Cauchy surface is maximal and closed, the arrow of time grows in both directions \cite{Aguirre:2007gy}, and inflation is 
 past and future finite.}
 
@@ -56,7 +56,7 @@ and eternal inflation can be ruled out.
 
 
 The decidability of eternal inflation is not typically a feature of inflationary models.
- Observationally viable models of inflation can be always be modified to support eternal inflation before the observed final 70 e-folds.   
+ Observationally viable models of inflation can be always be modified to support eternal inflation before the observed final 60 e-folds.   
  For example, a local minimum can be created above the observable region of the potential $V(\phi)$.
  Aside from having a local minimum, eternal inflation can occur when
  \begin{enumerate}
@@ -87,7 +87,7 @@ eternal inflation \cite{Vilenkin:1994pv,Linde:1994wt} occurs (see Section \ref{s
 The simplest axionic model is Natural inflation \cite{freese}, but this is observationally ruled out for sub Planckian $f$.
 We choose a periodic potential with an inflection point  because it is observationally viable.  
 Like all smooth\footnote{In appendix \ref{sec:topo}, we show that eternal topological inflation depends only on the value of $V''/V$ at a local maximum.} periodic potentials, it can both support eternal inflation ($f \geq \sqrt{3}\Mp/2$) and exclude the possibility ($f < \sqrt{3}\Mp/2$).  
-For small $f$, the last $70$ e-folds of inflation begin\footnote{
+For small $f$, the last $60$ e-folds of inflation begin\footnote{
 	These initial conditions are fine-tuned.  A natural mechanism to impose these initial conditions is unnecessary for our purposes, but could 
 	include thermal effects which make the inflection point into a local minimum at high temperatures.}
 when $\phi$ is near the inflection point \cite{Martin:2013tda, Allahverdi:2008bt, Hotchkiss:2011am,Musoke:2017frr}.
@@ -152,8 +152,8 @@ In this regime, we expect similar results as quartic inflation \cite{quartic}.  
 \begin{align}
 \Lambda = \frac{\sqrt[4]{\lambda } M}{\sqrt{2} \sqrt[4]{3}}, \quad f = \frac{M}{\sqrt[3]{2} \sqrt{3}}, \quad \beta = \frac{3 \sqrt{\delta}}{\sqrt[6]{2}},
 \end{align}
-in the small field limit $f \ll \Mp$.  Using this dictionary, we find the expected agreement between the two models in this regime.
-Major differences appear in the large field regime, since our potential is periodic.  In particular, our model does not have a regime resembling $\lambda \phi^4$ inflation.  While it does
+in the small-field limit $f \ll \Mp$.  Using this dictionary, we find the expected agreement between the two models in this regime.
+Major differences appear in the large-field regime, since our potential is periodic.  In particular, our model does not have a regime resembling $\lambda \phi^4$ inflation.  While it does
 have solutions resembling quadratic hill-top inflation, we neglect these solutions for the reasons outlined below.
 
 For $f \ll \Mp$, we will focus on solutions starting with slow roll (fine tuned) initial conditions starting at the inflection point, assuming either some mechanism can be built-in which accomplishes
@@ -161,11 +161,11 @@ this (say thermal effects which augment the potential and convert the inflection
 initial conditions.
 
 For example, since the flatness problem is solved only by having a sufficient number of e-foldings of inflation, we argue that the (at least) percent-level tuning of parameters and initial conditions in
-the small field regime could be explained as a selection effect, since structure formation requires a solution to the flatness problem.
+the small-field regime could be explained as a selection effect, since structure formation requires a solution to the flatness problem.
 
 
 The lack of tensor modes seen by Planck \cite{} constrains $f \leq 16\Mp$.  
-In the small field regime, CMB data fixes the dimensionless parameter $\beta \MMp/f^2~\sim~0.023$ which represents tuning of at least a few percent, and much more tuning for smaller $f/\Mp$.  
+In the small-field regime, CMB data fixes the dimensionless parameter $\beta \MMp/f^2~\sim~0.023$ which represents tuning of at least a few percent, and much more tuning for smaller $f/\Mp$.  
 %Initial conditions must additionally be  tuned to about one part in ...
 
 The scale of inflation $\Lambda^4$ does not represent significant fine-tuning, since it is a non-perturbative scale exponentially dependent on coupling constants.  
@@ -174,13 +174,90 @@ The axion decay constant $f$ is not fine tuned in this case, since it is not sup
 
 \section{Results}
 
-Our model is compatible with Planck 2018 for the range of parameters displayed in Figure~\ref{fig:parameters}
+Our model is compatible with Planck 2018 for the range of parameters displayed in Figure~\ref{fig:parameters}.  
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/fbregionPlanck2018.pdf}
     \caption{The fraction of parameter space compatible with Planck 2018 (blue).  The region where eternal inflation is impossible is shaded in orange.  There, Planck constrains $\beta \MMp f^{-2} \approx 0.023$.}\label{fig:parameters}
 \end{figure}
+
+
+
+\subsection{Analytic approximation for small-field inflation}
+As shown in Appendix \ref{sec:smallfield}, for small-field models ($f < \sqrt{3}\Mp/2$), $V(\phi)$ is nearly constant during inflation, and so the remaining number of e-folds can be approximated via
+\begin{align}
+N \approx \frac{V}{\MMp}\int\frac{\rmd\phi}{V'(\phi)}.
+\end{align}
+We can Taylor expand $V'(\phi)$ to cubic order about the inflection point to obtain a closed-form approximation for the value of $\phi$ corresponding to $N_\ast$ e-folds before the end of inflation.
+
+
+For our model, the result is
+\begin{align}
+\phi_\ast/f \approx -\sqrt{\frac{2}{3}}\beta \cot\left(\frac{2\sqrt{2}\beta\MMp}{3f^2}N_\ast\right) + {\cal O}(\beta^2/\sqrt{f})
+\end{align}  
+This, in turn provides a closed-form solution to all of the potential slow-roll parameters
+evaluated at $N_\ast$.
+
+
+
+
+
+To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
+\begin{align}
+ \beta \leq \frac{3\pi f^2}{4\sqrt{2}\MMp~N_{\rm tot}}, 
+ \end{align}
+which is necessarily much less than one, since the total number of e-folds is $N_{\rm tot} \gtrsim 50$. 
+which means the Hubble rate only decreases by the factor
+\begin{align}
+H_{\rm end}/H_{\rm start} \sim 1-\left(\frac{f}{\sqrt{6}\Mp}\right)^{3/2}
+\end{align}
+during inflation.  
+
+
+
+
+
+
+
+We find that the slow-roll parameter dependence
+on the parameter $\beta$ is only, to lowest order in $f/\Mp$, through the combination $\beta/f^2$.  For example, the total number of e-folds of inflation starting from the inflection point is
+\begin{align}
+N_{\rm tot}(\phi_{\rm i.p.}) = \frac{3 \pi f^2}{4\sqrt{2}\MMp\beta}.
+\end{align}
+
+In the small-field regime, we find the observables are well-approximated by
+\begin{align}
+n_s &= 1- \frac{8\sqrt{2}\beta \MMp}{3f^2\tan(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})},\label{eq:nsSF}\\
+r &= \frac{3}{2}\left(\frac{4\beta\MMp}{3f^2\sin(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})}\right)^4 \left(\frac{f}{\Mp}\right)^6 ,\\
+\alpha_s &= -2\left(\frac{4\beta \MMp}{3f^2\sin(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})} \right)^2.
+\end{align}
+
+Assuming $f < \Mp$, the spectral index constraints by Planck \cite{Akrami:2018odb} determine
+\begin{align}
+\frac{\beta \MMp}{f^2} = 0.023 \pm 0.001
+\end{align}
+ at 68\% confidence.  The degree to which the parameter $\beta$ is fine-tuned is at least a few percent, with greater tuning for smaller $f/\Mp$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -196,37 +273,44 @@ Our model is compatible with Planck 2018 for the range of parameters displayed i
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.6\textwidth]{figures/nsrplotvsf.pdf}
-    \caption{The tensor to scalar ratio vs. spectral index in the large field regime.  The left endpoints correspond to $\beta = 0$, while the right endpoints correspond to less than 55 e-folds of inflation.}
+    \caption{The tensor to scalar ratio vs. spectral index in the large-field regime.  
+    The left endpoints correspond to $\beta = 0$, while the right endpoints correspond to less than 55 e-folds of inflation.  The grey approximates the Planck 2018 68\% c.l. joint distribution
+    of $n_s$ and $r$.}
 \end{figure}
 
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/rvsnsplot.pdf}
-    \caption{The tensor-to-scalar ratio vs. spectral index in the small field regime.  $N_\ast = 55$ e-folds.}
+    \caption{The tensor-to-scalar ratio vs. spectral index in the small-field regime.  $N_\ast = 55$ e-folds.}
 \end{figure}
 
-
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=0.7\textwidth]{figures/rvsb.pdf}
+    \caption{The tensor-to-scalar ratio in the large-field regime.  $N_\ast = 55$ e-folds. The grey represents the region compatible
+    with the Planck 2018 68\% c.l marginalized distribution of $r$.}
+\end{figure}
 
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/nsvsbetaplot2.pdf}
-    \caption{The spectral index in the small field regime.}
+    \caption{The spectral index in the small-field regime.}
 \end{figure}
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/nsvsb.pdf}
-    \caption{The spectral index in the large field regime. The endpoints of the lines for the largest two values of $f$ correspond to where less than 55 e-folds of inflation occur.
-    Note that in the small field ($f < \Mp$) regime, $n_s$ depends only on $\beta \MMp f^{-2}$.}
+    \caption{The spectral index in the large-field regime. The grey represents the Planck 2018 68\% c.l. marginalized distribution of $n_s$.  The endpoints of the lines for the largest two values of $f$ correspond to where less than 55 e-folds of inflation occur.
+    Note that in the small-field ($f < \Mp$) regime, $n_s$ depends only on $\beta \MMp f^{-2}$.}\label{fig:nsvsboff}
 \end{figure}
 
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.6\textwidth]{figures/nsrf6plotvsf.pdf}
-    \caption{The rescaled tensor to scalar ratio vs. spectral index. Note that in the small field regime, $r (\Mp/f)^6$ is dependent only on $\beta$ through the combination $\beta/f^2$, as seen in Eq.~(\ref{eq:nsSF}).}
+    \caption{The rescaled tensor to scalar ratio vs. spectral index. Note that in the small-field regime, $r (\Mp/f)^6$ is dependent only on $\beta$ through the combination $\beta/f^2$, as seen in Eq.~(\ref{eq:nsSF}).}
 \end{figure}
 
 
@@ -235,11 +319,12 @@ Our model is compatible with Planck 2018 for the range of parameters displayed i
 \begin{figure}[!h]
   \centering
     \includegraphics[width=0.7\textwidth]{figures/alphasvsnsplot.pdf}
-    \caption{The running of the spectral index in the small field regime.  $N = 55$ e-folds.}
+    \caption{The running of the spectral index in the small-field regime.  $N = 55$ e-folds.}
 \end{figure}
 
+\subsection{Numerical solution to full equations}
 
-
+As described in Appendix \ref{sec:general}, we integrated the full equations of motion to obtain the predictions for $n_s$, $r$, and $\alpha_s$.  
 
 
 
@@ -251,7 +336,7 @@ Our model is compatible with Planck 2018 for the range of parameters displayed i
 Our results are similar to those found in \cite{Musoke:2017frr}, which considered inflection point inflation in a quartic potential.  In particular, for $f = \Mp/10$, the slope parameter at the inflection point, $\beta$, must be
 tuned to be about $10^{-4}$ in order to satisfy the Planck constraints on both $n_s$ and $\alpha_s$.  The scale of inflation $\Lambda$ must additionally be tuned, although a technically-natural mechanism exists for axion-like (periodic) potentials.  Finally, the initial conditions are also tuned to a high degree, as generic initial conditions lead to the overshoot problem.
 
-The situation appears better for large field inflation.
+The situation appears better for large-field inflation.
 For $f = 10 \Mp$, there is far less tuning necessary, except for the implied suppression of couplings to all UV degrees of freedom that normally forbid super-Planckian field excursions \cite{swampland, monodromy}.
 
 For $f > 100 \Mp$, the model is indistinguishable from chaotic $m^2\phi^2$ inflation, running into  
@@ -263,7 +348,7 @@ The main constraint in this case comes from observations indicating the tensor-t
     \includegraphics[width=0.7\textwidth]{figures/SRfraction.pdf}
     \caption{The fraction of field space where inflation can take place, assuming parameter values compatible with Planck 2018.  Smaller values of $f$ require more fine-tuned initial field values, unless a 
     mechanism is used to deform a local minimum into the inflection point, either
-    as a function of temperature or other fields.  For the observationally viable value of $\beta$ used here, the initial inflaton displacement must be fine-tuned by the factor $\Delta\phi/(2\pi f) \approx \sqrt{f/\Mp}$ in the small field regime.}
+    as a function of temperature or other fields.  For the observationally viable value of $\beta$ used here, the initial inflaton displacement must be fine-tuned by the factor $\Delta\phi/(2\pi f) \approx \sqrt{f/\Mp}$ in the small-field regime.}
 \end{figure}
 
 
@@ -288,7 +373,7 @@ This work was supported by a grant from the Foundational Questions Institute (FQ
 
 \section{Inflation}\label{sec:inflation}
 Inflation solves the horizon and flatness problems \cite{guth} by proposing that a fluid with equation of state $-1< w < -1/3$ dominate the Einstein equations, 
-causing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to shrink by a factor of $e^{70}$ or more. 
+causing the co-moving Hubble distance $(a H)^{-1} = 1/\dot a$ to shrink by a factor of $e^{60}$ or more. 
 Here, the Hubble rate is $H = \dot a/a$ and dots refer to derivatives with respect to cosmic time~$t$.  
 The most economical known example is provided by a single canonical scalar field $\phi$ dominated by the potential energy $V(\phi)$, 
 since the quantum fluctuations of the scalar field are sources of primordial curvature perturbations, which have been observed 
@@ -308,7 +393,7 @@ The effective equation of state of the scalar field is $w = \frac{\tfrac{1}{2}\d
 \end{align}
 
 
- %Solving the horizon and flatness problems requires $(a H)^{-1}$ to shrink by a sufficient factor, usually $e^{60}$  - $e^{70}$, with a smaller amount needed if the reheating scale is well below the GUT scale.
+ %Solving the horizon and flatness problems requires $(a H)^{-1}$ to shrink by a sufficient factor, usually $e^{50}$  - $e^{60}$, with a smaller amount needed if the reheating scale is well below the GUT scale.
 
 
 For each comoving scale $k$, the amplitude of the scalar field perturbation, $\delta \dot\phi = \frac{H^2}{2\pi}$, is frozen when that scale becomes ``super-horizon,'' i.e., when
@@ -423,15 +508,15 @@ they possess an attractor, which allows for predictions which are to some extent
 Changes to the initial conditions might affect the universe on unobservably large scales, while the local properties we can observe 
 are dependent only on the model parameters.
 
-Large field inflation, where the scalar field evolves over a super-Planckian field range, has the advantage that the inflationary attractor 
-is reached from a wider class of initial conditions.  Small field inflation requires much more tuning of the initial conditions in order to 
+Large-field inflation, where the scalar field evolves over a super-Planckian field range, has the advantage that the inflationary attractor 
+is reached from a wider class of initial conditions.  Small-field inflation requires much more tuning of the initial conditions in order to 
 guarantee that the solution is indeed inflationary.  In both cases, the potential must be fine-tuned from an effective field theory point of view.  
-For the large field case, the potential must be tuned to be flat over a super-Planckian field range, which is unnatural \cite{banks,swampland} for 
-EFTs embedded in string theory.  In the small field case, the potential must be tuned to be extremely flat in some region, 
+For the large-field case, the potential must be tuned to be flat over a super-Planckian field range, which is unnatural \cite{banks,swampland} for 
+EFTs embedded in string theory.  In the small-field case, the potential must be tuned to be extremely flat in some region, 
 and must also have percent-level tunings of higher derivatives there.
 
 
-For small field inflation, the needed flatness guarantees that the attractor solution has a nearly constant Hubble rate, which allows us to 
+For small-field inflation, the needed flatness guarantees that the attractor solution has a nearly constant Hubble rate, which allows us to 
 analytically solve the model using the so-called slow-roll approximation, which we introduce in the next subsection.  
 Later we will review the slow-roll expansion \cite{Liddle:1994dx}, which lets us compute the inflationary observables for any solution to the Friedmann equations, 
 demonstrating rather than assuming attractor behavior.  
@@ -524,18 +609,18 @@ Following an argument by Lyth \cite{lythbound}, we can use the attractor solutio
 \end{align}
 
 
-\subsection{Small field inflation}
-In the small field regime, where the total field variation $\Delta \phi < \Mp$ it must be that (averaged along the field trajectory)
+\subsection{Small-field inflation}\label{sec:smallfield}
+In the small-field regime, where the total field variation $\Delta \phi < \Mp$ it must be that (averaged along the field trajectory)
 \begin{align}
 \Mp V'(\phi) <  \frac{V - \dot\phi^2}{N} <  \frac{V}{N}.
 \end{align} 
-Using the slow-roll solution and the fact that $N \gg 1$, we can then say that, on average,
+Using the slow-roll solution (\ref{eq:slowroll}) and the fact that $N \gg 1$, we can then say that, on average,
 \begin{align}
 \dot\phi^2 \ll V.
 \end{align}
 
-Thus small field inflation last long enough only if $\dot\phi^2 \ll V(\phi)$, which means $H^2 \approx V/(3\MMp)$ and $w \approx -1$.
-Because $H$ is nearly constant during small field inflation, we will be able to analytically approximate the CMB observables.
+Thus small-field inflation lasts long enough only if $\dot\phi^2 \ll V(\phi)$, which means $H^2 \approx V/(3\MMp)$ and $w \approx -1$.
+Because $H$ is nearly constant during small-field inflation, we will be able to analytically approximate the CMB observables.
 
 
 It will be convenient to define the first two potential slow-roll parameters,
@@ -543,7 +628,7 @@ It will be convenient to define the first two potential slow-roll parameters,
 \epsilon_V &= \frac{\MMp}{2}\left(\frac{V'(\phi)}{V(\phi)}\right)^2,\\
 \eta_V &=  \MMp \frac{V''(\phi)}{V(\phi)}.
 \end{align}
-The small field regime thus requires $\epsilon_V \ll 1$.
+The small-field regime thus requires $\epsilon_V \ll 1$.
 Moreover, the consistency of the slow-roll solution in Eq.~(\ref{eq:slowroll}), namely that $\left|\ddot \phi/V'(\phi)\right| \ll 1$, requires
 \begin{align}
 \eta_V/3 - \epsilon_V \ll 1,
@@ -584,7 +669,7 @@ first and second slow-roll parameters,
 respectively.
 
 The first assumption is an initial condition, not related to the potential.
-One could include a fourth assumption, namely that the second and third assumptions hold for the final 70 e-folds of inflation, which means that higher derivatives
+One could include a fourth assumption, namely that the second and third assumptions hold for the final 60 e-folds of inflation, which means that higher derivatives
 of the potential must be sufficiently small in magnitude.
 
 
@@ -609,63 +694,8 @@ N = \frac{1}{\MMp}\int \frac{V(\phi)}{V'(\phi)}\rmd\phi.
 
 
 
-In the small field regime, $f <\sqrt{3}\Mp/2$, any viable model of inflation will obey the slow roll approximation,
+In the small-field regime, $f <\sqrt{3}\Mp/2$, any viable model of inflation will obey the slow roll approximation,
 which will allow us to obtain a closed-form approximation for all inflationary observables.  
-
-
-Since $V(\phi)$ is then nearly constant, 
-\begin{align}
-N \approx \frac{V}{\MMp}\int\frac{\rmd\phi}{V'(\phi)},
-\end{align}
-and we can Taylor expand $V'(\phi)$ to obtain a closed-form approximation for the value of $\phi$ corresponding to $N_\ast$ e-folds before the end of inflation.
-
-
-For our model, the result is
-\begin{align}
-\phi_\ast/f \approx -\sqrt{\frac{2}{3}}\beta \cot\left(\frac{2\sqrt{2}\beta\MMp}{3f^2}N_\ast\right) + {\cal O}(\beta^2/\sqrt{f})
-\end{align}  
-This, in turn provides a closed-form solution to all of the potential slow-roll parameters
-evaluated at $N_\ast$.
-
-
-
-
-
-To obtain $N_{\rm tot}$ efolds of inflation in this regime requires
-\begin{align}
- \beta \leq \frac{3\pi f^2}{4\sqrt{2}\MMp~N_{\rm tot}}, 
- \end{align}
-which is necessarily much less than one, since the total number of e-folds is $N_{\rm tot} \gtrsim 70$. 
-which means the Hubble rate only decreases by the factor
-\begin{align}
-H_{\rm end}/H_{\rm start} \sim 1-\left(\frac{f}{\sqrt{6}\Mp}\right)^{3/2}
-\end{align}
-during inflation.  
-
-
-
-
-
-
-
-We find that the slow-roll parameter dependence
-on the parameter $\beta$ is only, to lowest order in $f/\Mp$, through the combination $\beta/f^2$.  For example, the total number of e-folds of inflation starting from the inflection point is
-\begin{align}
-N_{\rm tot}(\phi_{\rm i.p.}) = \frac{3 \pi f^2}{4\sqrt{2}\MMp\beta}.
-\end{align}
-
-In the small-field regime, we find the observables are well-approximated by
-\begin{align}
-n_s &= 1- \frac{8\sqrt{2}\beta \MMp}{3f^2\tan(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})},\label{eq:nsSF}\\
-r &= \frac{3}{2}\left(\frac{4\beta\MMp}{3f^2\sin(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})}\right)^4 \left(\frac{f}{\Mp}\right)^6 ,\\
-\alpha_s &= -2\left(\frac{4\beta \MMp}{3f^2\sin(\frac{\sqrt{8}N_\ast\beta\MMp}{3 f^2})} \right)^2.
-\end{align}
-
-Assuming $f < \Mp$, the spectral index constraints by Planck \cite{Akrami:2018odb} determine
-\begin{align}
-\frac{\beta \MMp}{f^2} = 0.023 \pm 0.001
-\end{align}
- at 68\% confidence.  The degree to which the parameter $\beta$ is fine-tuned is at least a few percent, with greater tuning for smaller $f/\Mp$.
 
 
 
@@ -727,7 +757,7 @@ Because we are considering a single-field inflationary model, the only topologic
 One should expect that a positive tension domain wall would be gravitationally repulsive, owing to the concept of active gravitational mass.  Furthermore, 
 the gravitational repulsion from a domain wall should be position-independent far from the core of the defect, since the Green's function for a co-dimension one Newtonian
 source is a linear potential.  Position-independent repulsion means the spacetime surrounding a domain wall should be flat, with the domain wall accelerating away from any inertial observer.  
-For example, a Lorentz invariant bubble in Minkowski space appears repulsive to observers inside the bubble.  Thus we are led to the ISV ansatz
+For example, a Lorentz invariant bubble in Minkowski space appears repulsive to observers inside the bubble.  Thus we are led to the ISV ansatz \cite{Ipser:1983db, Vilenkin:1984hy}
 of a domain wall as two copies of the interior of a bubble geometry, glued together on the surface of the bubble, as seen in the left-hand panel of Figure~\ref{fig:ISV}.
 \begin{figure}[htbp]
 \begin{center}
@@ -740,7 +770,7 @@ double analytic continuation $z\to i t$, $t \to r + i\pi/2$ of the metric in Eq.
 \end{figure}
 
 
-The metric sourced by a static ``planar'' domain wall has the ISV \cite{Ipser:1983db, Vilenkin:1984hy} form
+The metric sourced by a static ``planar'' domain wall has the form
 \begin{align}
 \rmd s^2 = \rmd z^2 + \ell^2(z)\left( -\rmd t^2 + \cosh^2 t~\rmd \Omega_2^2\right),\label{eq:ISVmetric}
 \end{align}
@@ -767,14 +797,14 @@ In other words, for topological eternal inflation, the de Sitter maximum is stab
 
 The longest wavelength (fastest growing) perturbation with a
 node at $z=0$ is given by $\delta\phi \propto \sin(z/\ell_0)$, since the equations of motion require $\partial_z\phi$ to vanish at the horizons, where $z = \pm \pi \ell_0/2$.
-This perturbation grows when topological inflation is not eternal, but decays back to a homogeneous de Sitter patch when it is eternal.
+This perturbation grows in amplitude when topological inflation is not eternal, but decays back to a homogeneous de Sitter patch when it is eternal.
 Thus the threshold for topological eternal inflation occurs when this longest wavelength mode is static, neither growing nor decaying.
 
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=1\textwidth]{figures/TEI}
-\caption{{\bf Left:} When eternal topological inflation is not possible, any perturbation to the homogeneous $\phi(z) = \phi_{\rm peak}$ solution is unstable, and the field collapses into a finite thickness domain wall geometry.
+\caption{Penrose diagrams illustrating topological inflation.  {\bf Left:} When eternal topological inflation is not possible, any perturbation to the homogeneous $\phi(z) = \phi_{\rm peak}$ solution is unstable, and the field collapses into a finite thickness domain wall geometry.
 {\bf Right:}  In the eternally inflating regime, a dipole perturbation cannot grow in the vicinity of the core, relaxing instead back to de Sitter space.  Thermalized regions II and II' do result from the perturbation, but are separated by a domain wall exponentially growing in thickness.}
 \label{fig:TEI}
 \end{center}
@@ -811,11 +841,11 @@ since there exists an unstable perturbation, leading to finite thickness domain 
 
 \section{Stochastic Eternal Inflation}\label{sec:stoc}
 Another type of eternal inflation occurs when the monotonic classical rolling of the inflaton is persistently overwhelmed by its quantum fluctuations \cite{steinhardt1982,Vilenkin:1983xq,Linde:1983gd}.  
-After each Hubble time, the physical spatial volume of an inflating Hubble volume grows by a factor of $e^3$.  If on average more than one daughter Hubble volume
+After each Hubble time, the physical spatial volume of an inflating Hubble volume grows by a factor of $\sim e^3$.  If on average more than one daughter Hubble volume
 experiences an uphill fluctuation, then stochastic eternal inflation inevitably occurs.
 
 
-Although the slope at the inflection point is chosen large enough to forbid uphill fluctuations, the slope at the maximum of $V$ vanishes, and so could lead to stochastic eternal inflation \cite{Barenboim:2016mmw}.  
+Although observations of the spectral index $n_s$ constrain the slope at the inflection point to be large enough to forbid uphill fluctuations, the slope at the maximum of $V$ vanishes, and so could lead to stochastic eternal inflation \cite{Barenboim:2016mmw}.  
 However all directions are downhill from the maximum, so the question is slightly more subtle, as we will show in the next subsection.
 
 The classical evolution of the inflaton is given by the equation of motion
@@ -838,49 +868,38 @@ is persistently smaller in magnitude than the Bunch-Davies quantum fluctuation. 
 time the scalar field is likely to have moved uphill in at least one of the $e^3\approx 20$ Hubble volumes produced during
 a Hubble time, 
 
-Thus we will define the region of field space satisfying
+Thus we will define the stochastic region of field space, satisfying
 \begin{align}
-\frac{\left| V'(\phi)\right|}{3 H} \lesssim  \frac{H^2}{2\pi}
+\frac{\left| V'(\phi)\right|}{3 H} \leq  \frac{H^2}{2\pi},
 \end{align}
-as $\phi \in \Phi_{\rm ee}$.
+as $\phi \in \Phi_{\rm sto}$.
 
-Eternal inflation occurs when $\Phi_{\rm ee} > \frac{H}{2\pi}$, meaning the field does not fluctuate out of $\Phi_{\rm ee}$ in less than a Hubble time.
+Eternal inflation occurs when the size of the stochastic region obeys 
+\begin{align}
+\left|\Phi_{\rm sto}\right| \gtrsim \frac{H}{2\pi},\label{eq:stochastic}
+\end{align} 
+meaning the field does not fluctuate out of $\Phi_{\rm sto}$ in less than a Hubble time.
 
 
 \subsection{near local maxima}\label{app:sei}
-At the top of the potential the attractor velocity is zero, but a single point in field space cannot be relevant for eternal inflation\cite{Barenboim:2016mmw}.  
-This is because the field velocity is bounded below by the quantum fluctuation.  
-The fluctuating field exits any region smaller than $\Delta\phi = \frac{H}{2\pi}$ within a Hubble time.  
 
-
-
-The eternal inflation region of the potential, defined as where classical motion along the attractor is subdominant, will be called $\Delta\phi_{\rm ee}$.  
-It is given by the portion of the peak (or stationary inflection point) where $|\dot\phi_{\rm cl}| \leq \frac{H^2}{2\pi}$, i.e.,
-\begin{align}
-\left|V'(\phi)\right| \leq \frac{3 H^3}{2\pi}.
-\end{align}
-
-Thus stochastic eternal inflation can occur only if
-\begin{align}
-\Delta\phi_{\rm ee} \gtrsim \frac{H}{2\pi}.
-\end{align}
 For the potential whose local maximum resembles
 \beq
 V(\phi) \approx \Lambda^4\left[2 - \frac{\phi^2}{f^2}\right], \label{eq:Vp2}
 \eeq
-stochastic eternal inflation can occur for
+equation (\ref{eq:stochastic}) is satisfied for
 \begin{align}
-f > \Mp.
+f \gtrsim \Mp.
 \end{align}
-It is interesting that this is roughly the same bound as for the purely classical phenomenon of topological eternal inflation even though the argument here seems essentially quantum mechanical.  The reason
-why quantum mechanics is effectively absent here is because we are comparing two effects that each scale with $\hbar$:  The region of the potential which supports uphill quantum fluctuations is proportional to $\hbar$ (using the quadratic approximation), and also the distance the inflaton fluctuates in a Hubble time is proportional to $\hbar$.  Hence, the number of Hubble times before the field leaves this stochastic region is $\hbar$-independent, and thus appears classical.
+It is interesting that this is roughly the same bound as for the purely classical phenomenon of topological eternal inflation, even though the argument here seems essentially quantum mechanical.  The reason
+why quantum mechanics is effectively absent here is because we are comparing two effects that each scale with $\hbar$:  The size of the region of the potential which supports uphill quantum fluctuations is proportional to $\hbar$ (using the quadratic approximation for $V(\phi)$), and also the distance the inflaton fluctuates in a Hubble time is proportional to $\hbar$.  Hence, the number of Hubble times before the field leaves this stochastic region is $\hbar$-independent, and thus appears classical.
 
 
 \subsection{near an inflection point}
 Since the local maximum cannot give rise to stochastic eternal inflation when $f \lesssim \Mp$, the last place we need to consider is near the inflection point. 
 Note that for pure imaginary $\beta$, there is a false vacuum, and so unsurprisingly, stochastic eternal inflation exists near the inflection point for $\beta = 0$.  Such small
-values of $\beta$ yield values of $n_s$ far too red to be compatible with observations (unless $f \gtrsim 10 \Mp$), as can be seen from figure \ref{fig:fbetaregion}. 
-Existing constraints on the spectral index $n_s$ require $\beta > 0.01 f^2/\MMp$.  This rules out the possibility of stochastic eternal inflation for observationally viable regions of
+values of $\beta$ yield values of $n_s$ too low to be compatible with observations (unless $f \gtrsim 10 \Mp$), as can be seen from figure \ref{fig:nsvsboff}. 
+Existing constraints on the spectral index $n_s$ rule out the possibility of stochastic eternal inflation for observationally viable regions of
 parameter space, except in regions that already give rise to eternal topological inflation.
 
 
